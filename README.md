@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [github link](https://github.com/cmcrawford2/home-website)
-- Live Site URL: [cris crawford's home webpage on netlify](https://cris-crawfords-home-website.netlify.app)
+- Solution URL: [github link](https://github.com/cmcrawford2/room-homepage)
+- Live Site URL: [cris crawford's home webpage on netlify](https://cris-crawfords-room-homepage.netlify.app)
 
 ## My process
 
