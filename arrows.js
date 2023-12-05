@@ -40,7 +40,7 @@ function resizeArrows() {
   const windowWidth = window.innerWidth;
   const arrowBoxes = document.querySelectorAll(".arrow");
 
-  if (windowWidth > 960) {
+  if (windowWidth >= 960) {
     // Get the elements for top and bottom grid items
     const topGridItem = document.querySelector(".hero-image");
     const bottomGridItem = document.querySelector(".about-section--text");
@@ -54,9 +54,9 @@ function resizeArrows() {
       const arrowBoxWidth = (bottomGridItemEnd - topGridItemEnd) / 2;
 
       // Sometimes the arrowBoxWidth is huge, for some strange reason.
-      if (arrowBoxWidth > 75) {
+      if (arrowBoxWidth > 100) {
         console.log("The arrow box is HUGE!");
-        arrowBoxWidth = 75;
+        arrowBoxWidth = 100;
       }
 
       arrowBoxes.forEach((arrowBox) => {
