@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Room homepage</title>
+    <script src="arrows.js" defer></script>
+    <script src="navigation.js" defer></script>
+  </head>
+  <!--up to 30 rem we have mobile pictures and mobile menu-->
+  <!--from 30 rem to 60 rem we have mobile layout but desktop nav and images-->
+  <!--from 60 rem on up we have desktop nav, images and layout-->
+  <body>
+    <div class="logo-image-container">
+      <img class="logo-image" src="images/logo.svg" alt="home logo" />
+    </div>
+    <header>
+      <!--The nav for mobile has the hamburger (hidden) or close (visible) icon.-->
+      <!--When it's for desktop, the icon is the logo and the divs are visible.-->
+      <nav>
+        <img
+          class="nav-image"
+          src="images/icon-hamburger.svg"
+          alt="hamburger menu"
+          data-icontype="hamburger"
+        />
+        <div class="hidden half-border-container">
+          <div>Home</div>
+          <div class="half-border"></div>
+        </div>
+        <div class="hidden half-border-container">
+          <div>Shop</div>
+          <div class="half-border"></div>
+        </div>
+        <div class="hidden half-border-container">
+          <div>About</div>
+          <div class="half-border"></div>
+        </div>
+        <div class="hidden half-border-container">
+          <div>Contact</div>
+          <div class="half-border"></div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="hidden mobile-modal">
+      <div class="mobile-modal--top"></div>
+      <div class="mobile-modal--bottom"></div>
+    </div>
+
+    <main>
+      <section id="article-section">
+        <article class="hero-article">
+          <div class="hero-image-container">
+            <img
+              id="1"
+              class="hero-image"
+              src="images/mobile-image-hero-1.jpg"
+              alt="table and chairs"
+            />
+            <div class="arrow left-arrow">
+              <img
+                class="left-arrow-img"
+                src="images/icon-angle-left.svg"
+                alt="left-pointer"
+              />
+            </div>
+            <div class="arrow right-arrow">
+              <img
+                class="right-arrow-img"
+                src="images/icon-angle-right.svg"
+                alt="right-pointer"
+              />
+            </div>
+          </div>
+          <div class="article-text">
+            <h2>Discover innovative ways to decorate</h2>
+            <p>
+              We provide unmatched quality, comfort, and style for property
+              owners across the country. Our experts combine form and function
+              in bringing your vision to life. Create a room in your own style
+              with our collection and make your property a reflection of you and
+              what you love.
+            </p>
+            <div class="span-with-arrow">
+              <span>Shop now</span
+              ><img src="images/icon-arrow.svg" alt="arrow" />
+            </div>
+          </div>
+        </article>
+        <article class="hero-article">
+          <div class="hidden hero-image-container">
+            <img
+              id="2"
+              class="hero-image"
+              src="images/mobile-image-hero-2.jpg"
+              alt="table and chairs"
+            />
+            <div class="arrow left-arrow">
+              <img
+                class="left-arrow-img"
+                src="images/icon-angle-left.svg"
+                alt="left-pointer"
+              />
+            </div>
+            <div class="arrow right-arrow">
+              <img
+                class="right-arrow-img"
+                src="images/icon-angle-right.svg"
+                alt="right-pointer"
+              />
+            </div>
+          </div>
+          <div class="hidden article-text">
+            <h2>We are available all across the globe</h2>
+            <p>
+              With stores all over the world, it's easy for you to find
+              furniture for your home or place of business. Locally, we’re in
+              most major cities throughout the country. Find the branch nearest
+              you using our store locator. Any questions? Don't hesitate to
+              contact us today.
+            </p>
+            <div class="span-with-arrow">
+              <span>Shop now</span
+              ><img src="images/icon-arrow.svg" alt="arrow" />
+            </div>
+          </div>
+        </article>
+        <article class="hero-article">
+          <div class="hidden hero-image-container">
+            <img
+              id="3"
+              class="hero-image"
+              src="images/mobile-image-hero-3.jpg"
+              alt="table and chairs"
+            />
+            <div class="arrow left-arrow">
+              <img
+                class="left-arrow-img"
+                src="images/icon-angle-left.svg"
+                alt="left-pointer"
+              />
+            </div>
+            <div class="arrow right-arrow">
+              <img
+                class="right-arrow-img"
+                src="images/icon-angle-right.svg"
+                alt="right-pointer"
+              />
+            </div>
+          </div>
+          <div class="hidden article-text">
+            <h2>Manufactured with the best materials</h2>
+            <p>
+              Our modern furniture stores provide a high level of quality. Our
+              company has invested in advanced technology to ensure that every
+              product is made as perfect and as consistent as possible. With
+              three decades of experience in this industry, we understand what
+              customers want for their home and office.
+            </p>
+            <div class="span-with-arrow">
+              <span>Shop now</span
+              ><img src="images/icon-arrow.svg" alt="arrow" />
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="about-section">
+        <div class="about-section--image1">
+          <img src="images/image-about-dark.jpg" alt="dark chairs and table" />
+        </div>
+        <div class="about-section--text">
+          <h3>About our furniture</h3>
+          <p>
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best expresses your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </div>
+        <div class="about-section--image2">
+          <img src="images/image-about-light.jpg" alt="light chair" />
+        </div>
+      </section>
+    </main>
+    <script>
+      window.addEventListener("load", () => {
+        // Swap desktop for mobile images when we go to desktop screen.
+        const images = document.querySelectorAll(".hero-image");
+
+        function swapImages(images) {
+          images.forEach((image) => {
+            if (window.innerWidth >= 480) {
+              image.src = `images/desktop-image-hero-${image.id}.jpg`;
+            } else {
+              image.src = `images/mobile-image-hero-${image.id}.jpg`;
+            }
+          });
+        }
+        // Call swapImage() initially and on window resize
+        swapImages(images);
+        window.addEventListener("resize", () => swapImages(images));
+
+        function swapNavVisibility() {
+          // Hide/unhide mobile nav divs.
+          const navDivs = document.querySelectorAll(".half-border-container");
+          if (window.innerWidth >= 480) {
+            navDivs.forEach((div) => div.classList.remove("hidden"));
+          } else {
+            navDivs.forEach((div) => div.classList.add("hidden"));
+          }
+          // Update the logo/hamburger
+          const navImage = document.querySelector(".nav-image");
+          const logo = document.querySelector(".logo-image");
+          if (window.innerWidth >= 480) {
+            navImage.src = "images/logo.svg";
+            navImage.setAttribute("data-icontype", "logo");
+            // Hide the logo on the mobile screen
+            logo.classList.add("hidden");
+          } else {
+            navImage.src = "images/icon-hamburger.svg";
+            navImage.setAttribute("data-icontype", "hamburger");
+            // Reveal the logo on the mobile screen
+            logo.classList.remove("hidden");
+          }
+          // Make sure the modal is hidden.
+          const modal = document.querySelector(".mobile-modal");
+          modal.classList.add("hidden");
+        }
+
+        swapNavVisibility();
+        window.addEventListener("resize", () => swapNavVisibility());
+      });
+    </script>
+  </body>
+</html>

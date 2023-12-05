@@ -1,0 +1,396 @@
+/* ------------------- */
+/* Custom properties   */
+/* ------------------- */
+
+:root {
+  /* colors */
+  --clr-dark: 0 0% 63%;
+  --clr-very-dark: 0 0% 27%;
+  --clr-black: 0 0% 0%;
+  --clr-white: 0 0% 100%;
+
+  /* font-sizes */
+  --fs-600: 2.5rem; /* 40px */
+  --fs-500: 1rem; /* 16px */
+  --fs-400: 0.875rem; /* 14px */
+  --fs-300: 0.9375rem; /* 15px */
+  --fs-200: 1rem; /* 16px */
+
+  /* font-families */
+  --ff-sans: "League Spartan", sans-serif;
+}
+
+@media (min-width: 30em) {
+  :root {
+    --fs-600: clamp(2rem, 3.333vw, 4rem); /* 48px */
+    --fs-400: 1rem; /* 16px */
+    --fs-200: clamp(0.875rem, 1.444vw, 1rem);
+  }
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 500;
+}
+
+body {
+  font-family: var(--ff-sans);
+  font-size: var(--fs-200);
+  color: hsl(var(--clr-black));
+  background-color: hsl(var(--clr-white));
+  min-height: 100vh;
+  display: grid;
+}
+
+/* make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ------------------------ */
+/* Utility classes          */
+/* ------------------------ */
+
+.hidden {
+  display: none;
+}
+
+.hidden > * {
+  display: none;
+}
+
+.article-text {
+  margin: 3.5rem 2rem 4rem 2rem;
+}
+
+.about-section--text {
+  padding: 3rem 2rem;
+}
+
+@media (min-width: 60rem) {
+  .article-text {
+    margin-top: clamp(2rem, 7.777vw, 7rem);
+    margin-bottom: 0;
+    margin-left: clamp(2rem, 6.666vw, 6rem);
+    margin-right: clamp(2rem, 6.666vw, 6rem);
+    /* margin: 7.5rem 6rem 0 6rem; */
+  }
+
+  .about-section--text {
+    padding: clamp(1.5rem, 3.333vw, 3rem) clamp(1rem, 2.222vw, 2rem);
+  }
+}
+
+/* ------------------------ */
+/* Type styles              */
+/* ------------------------ */
+
+h2 {
+  font-size: var(--fs-600);
+  line-height: 0.9;
+  font-weight: 600;
+  letter-spacing: -1.67px;
+}
+
+h3 {
+  font-size: var(--fs-400);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5.83px;
+}
+
+p {
+  font-size: var(--fs-200);
+  font-weight: 500;
+  line-height: 1.375;
+  letter-spacing: -0.33;
+  color: hsl(var(--clr-dark));
+  margin-top: 1rem;
+}
+
+span {
+  font-size: var(--fs-300);
+  font-weight: 500;
+  line-height: 1.067;
+  text-transform: uppercase;
+  letter-spacing: 12.5px;
+}
+
+/* ------------ */
+/* Logo         */
+/* ------------ */
+
+/* Will be hidden for desktop and tablet */
+.logo-image-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  top: 2.75rem;
+  width: 100%;
+}
+
+.logo-image {
+  height: 0.8rem;
+  width: auto;
+}
+
+/* ------------- */
+/* Header styles */
+/* ------------- */
+
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  margin-top: 2.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (min-width: 30rem) {
+  header {
+    width: 35vw;
+    min-width: 17rem;
+    padding: 0;
+    margin-top: clamp(2.5rem, 4.444vw, 4.5rem);
+    margin-left: clamp(2rem, 3.888vw, 4rem);
+  }
+}
+
+@media (min-width: 60rem) {
+  header {
+    width: 25vw;
+  }
+}
+
+.nav-image {
+  height: 0.8rem;
+  width: auto;
+  padding-right: 3rem;
+  margin-bottom: 0.45rem; /* to match the bottom "border" of the divs */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--fs-500);
+  font-weight: 600;
+  line-height: 1.375;
+  text-transform: lowercase;
+  letter-spacing: -0.67;
+  color: hsl(var(--clr-black));
+}
+
+nav > .half-border-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+nav > .half-border-container > .half-border {
+  width: 1rem;
+  height: 0.2rem;
+  background-color: transparent;
+}
+
+nav > .half-border-container:hover {
+  cursor: pointer;
+}
+
+nav > .half-border-container:hover > .half-border {
+  background-color: hsl(var(--clr-black));
+}
+
+@media (min-width: 30rem) {
+  nav {
+    color: hsl(var(--clr-white));
+  }
+
+  .nav-image {
+    padding-right: clamp(1rem, 2.222vw, 2.5rem);
+  }
+
+  nav > .half-border-container:hover > .half-border {
+    background-color: hsl(var(--clr-white));
+  }
+}
+
+.mobile-modal {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+}
+
+.mobile-modal--top {
+  height: 6.875rem;
+  background-color: hsl(var(--clr-white));
+}
+
+.mobile-modal--bottom {
+  height: 100%;
+  background-color: hsl(var(--clr-black));
+  opacity: 50%;
+}
+
+/* -------------- */
+/* Image styles   */
+/* -------------- */
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.span-with-arrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+
+.span-with-arrow > img {
+  height: 1rem;
+  width: auto;
+  margin-left: 1rem;
+}
+
+.span-with-arrow:hover,
+.span-with-arrow:focus {
+  cursor: pointer;
+  opacity: 50%;
+}
+
+@media (min-width: 60rem) {
+  .span-with-arrow {
+    margin-top: clamp(0.5rem, 2.222vw, 2rem);
+  }
+}
+
+/* ============================== */
+/* Arrows that change the picture */
+/* ============================== */
+
+.hero-image-container {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 0;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: hsl(var(--clr-black));
+}
+
+/* The svg should fill the box for selection purposes. */
+/* However we want the arrow part to be small, so add padding. */
+
+.arrow > img {
+  height: 3.5rem;
+  width: 3.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.left-arrow {
+  right: 3.5rem;
+}
+
+.right-arrow {
+  right: 0;
+}
+
+.arrow:hover,
+.arrow:focus {
+  cursor: pointer;
+  background-color: hsl(var(--clr-very-dark));
+}
+
+/* This is actually set in arrows.js */
+@media (min-width: 60em) {
+  .left-arrow {
+    right: -3.5rem;
+  }
+  .right-arrow {
+    right: -7rem;
+  }
+}
+
+/* ----------------------------- */
+/* Layout for desktop            */
+/* ----------------------------- */
+
+@media (min-width: 60em) {
+  .hero-article {
+    display: grid;
+    grid-template-columns: 840fr 600fr;
+    grid-template-areas: "hero text";
+  }
+
+  .hero-article > .hero-image {
+    grid-area: hero;
+  }
+
+  .hero-article > .article-text {
+    grid-area: text;
+  }
+
+  .about-section {
+    display: grid;
+    position: relative;
+    grid-template-columns: 420fr 580fr 440fr;
+    grid-template-areas: "image1 text image2";
+  }
+
+  .about-section > .about-section--image1 {
+    grid-area: image1;
+  }
+
+  .about-section > .about-section--text {
+    grid-area: text;
+  }
+
+  .about-section > .about-section--image2 {
+    grid-area: image2;
+  }
+}
